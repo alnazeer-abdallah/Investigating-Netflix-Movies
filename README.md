@@ -3,13 +3,16 @@
 ## Overview
 This project aims to explore the netflix_data.csv data to understand more about movies from the 1990s decade.
 
-Netflix! What started in 1997 as a DVD rental service has since exploded into one of the largest entertainment and media companies.
+(1) What was the most frequent movie duration in the 1990s? Save an approximate answer as an integer called duration (use 1990 as the decade's start year).
+
+(2) A movie is considered short if it is less than 90 minutes. Count the number of short action movies released in the 1990s and save this integer as short_movie_count
+
 
 ![Investigating-Netflix-Movies Data Col](https://github.com/user-attachments/assets/1a07acfc-3e5a-4a19-a9bd-f934f6a4169e)
 
-What was the most frequent movie duration in the 1990s? Save an approximate answer as an integer called duration (use 1990 as the decade's start year).
 
-## Python Code :
+
+## Python Code (1) :
 
 ```
 # Importing pandas and matplotlib
@@ -39,11 +42,11 @@ print('The most frequent movie duration in the 1990s is : ' + str(duration) + ' 
 ```
 ![Investigating-Netflix-Movies Hist](https://github.com/user-attachments/assets/aedf9d44-87fb-430a-ac44-85931aa6fb0c)
 
-#### The most frequent movie duration in the 1990s is : 100 minutes
+`The most frequent movie duration in the 1990s is : 100 minutes`
 
-A movie is considered short if it is less than 90 minutes. Count the number of short action movies released in the 1990s and save this integer as short_movie_count
 
-## Python Code :
+
+## Python Code (2) :
 
 ```
 # Filter the data again to keep only the Action movies
@@ -68,6 +71,7 @@ print('Short action movies number is : ' + str(short_movie_count))
 # A quicker way of counting values in a column is to use .sum() on the desired column
 # (action_movies_1990s["duration"] < 90).sum()
 ```
-#### Total action movies number is : 50
-#### Short action movies number is : 8
+`Total action movies number is : 50`
+
+`Short action movies number is : 8`
 
